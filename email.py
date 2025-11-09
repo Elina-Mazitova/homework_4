@@ -38,3 +38,6 @@ intersection = set(personal_domains) & set(corporate_domains)
 
 #8. Проверьте «корпоративность» отправителя: создайте булеву переменную is_corporate, равную результату проверки вхождения домена отправителя в список корпоративных доменов.
 is_corporate = domain in corporate_domains
+
+#9. Соберите «чистый» текст сообщения без табов и переводов строк: замените "\t" и "\n" на пробел. Сохраните в email["clean_body"].
+email["clean_body"] = email["body"].replace("\t", " ").replace("\n", " ")
