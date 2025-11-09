@@ -10,3 +10,7 @@ email = {
 #2. Добавьте дату отправки: создайте переменную send_date как текущую дату в формате YYYY-MM-DD и запишите её в email["date"].
 send_date = datetime.datetime.now().strftime("%Y-%m-%d")
 email["date"] = send_date
+
+#3. Нормализуйте e-mail адреса отправителя и получателя: приведите к нижнему регистру и уберите пробелы по краям.Запишите обратно в email["from"] и email["to"].
+email["from"] = email["from"].strip().casefold()
+email["to"] = email["to"].strip().casefold()
