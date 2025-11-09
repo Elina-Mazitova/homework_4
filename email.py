@@ -21,3 +21,14 @@ domain = email["from"].split("@")[1]
 
 #5. Создайте сокращённую версию текста: возьмите первые 10 символов email["body"] и добавьте многоточие "...". Сохраните в новый ключ словаря: email["short_body"].
 email["short_body"] = email["body"][0:10] + '...'
+
+#6. Списки доменов: создайте список личных доменов и список корпоративных доменов  с учетом того что там должны быть только уникальные значение
+personal_domains = list({
+    'gmail.com','list.ru', 'yahoo.com','outlook.com',
+    'hotmail.com','icloud.com','yandex.ru','mail.ru',
+    'list.ru','bk.ru','inbox.ru'
+})
+corporate_domains = list({
+    'company.ru','corporation.com','university.edu',
+    'organization.org','company.ru', 'business.net'
+})
