@@ -14,3 +14,7 @@ email["date"] = send_date
 #3. Нормализуйте e-mail адреса отправителя и получателя: приведите к нижнему регистру и уберите пробелы по краям.Запишите обратно в email["from"] и email["to"].
 email["from"] = email["from"].strip().casefold()
 email["to"] = email["to"].strip().casefold()
+
+#4. Извлеките логин и домен отправителя в две переменные login и domain.
+login = email["from"].split("@")[0]
+domain = email["from"].split("@")[1]
