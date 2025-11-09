@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime
 #1. Создайте словарь email, содержащий следующие поля: "subject" (тема письма), "from" (адрес отправителя), "to" (адрес получателя), "body" (текст письма).
 email = {
     "subject": "Elina Homework",
@@ -8,7 +8,7 @@ email = {
 }
 
 #2. Добавьте дату отправки: создайте переменную send_date как текущую дату в формате YYYY-MM-DD и запишите её в email["date"].
-send_date = datetime.datetime.now().strftime("%Y-%m-%d")
+send_date = datetime.now().strftime("%Y-%m-%d")
 email["date"] = send_date
 
 #3. Нормализуйте e-mail адреса отправителя и получателя: приведите к нижнему регистру и уберите пробелы по краям.Запишите обратно в email["from"] и email["to"].
@@ -32,3 +32,6 @@ corporate_domains = list({
     'company.ru','corporation.com','university.edu',
     'organization.org','company.ru', 'business.net'
 })
+
+#7. Проверьте что в списке личных и корпоративных доменов нет пересечений: ни один домен не должен входить в оба списка одновременно.
+intersection = set(personal_domains) & set(corporate_domains)
