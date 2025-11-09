@@ -67,3 +67,7 @@ is_body_empty = not email["body"].strip()
 #13. Создайте «маску» e-mail отправителя: первые 2 символа логина + "***@" + домен.
 # Запишите в email["masked_from"].
 email["masked_from"] = login[:2] + "***@" + domain
+
+#14. Удалите из списка личных доменов значения "list.ru" и "bk.ru".
+if "list.ru" in personal_domains: personal_domains.remove("list.ru")
+if "bk.ru" in personal_domains: personal_domains.remove("bk.ru")
