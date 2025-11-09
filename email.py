@@ -63,3 +63,7 @@ pages = (len(email["sent_text"]) + 499) // 500
 # в котором будет хранится что тема письма содержит данные.
 is_subject_empty = not email["subject"].strip()
 is_body_empty = not email["body"].strip()
+
+#13. Создайте «маску» e-mail отправителя: первые 2 символа логина + "***@" + домен.
+# Запишите в email["masked_from"].
+email["masked_from"] = login[:2] + "***@" + domain
