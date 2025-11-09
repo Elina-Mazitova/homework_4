@@ -18,3 +18,6 @@ email["to"] = email["to"].strip().casefold()
 #4. Извлеките логин и домен отправителя в две переменные login и domain.
 login = email["from"].split("@")[0]
 domain = email["from"].split("@")[1]
+
+#5. Создайте сокращённую версию текста: возьмите первые 10 символов email["body"] и добавьте многоточие "...". Сохраните в новый ключ словаря: email["short_body"].
+email["short_body"] = email["body"][0:10] + '...'
