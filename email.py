@@ -58,3 +58,8 @@ email["sent_text"] = f"""Кому: {email["to"]}, от {email["from"]} Тема:
 #11. Рассчитайте количество страниц печати для email["sent_text"], если на 1 страницу помещается 500 символов.
 # Сохраните результат в переменную pages. Значение должно быть округленно в большую сторону.
 pages = (len(email["sent_text"]) + 499) // 500
+
+#12. Проверьте пустоту темы и тела письма: создайте переменные is_subject_empty, is_body_empty
+# в котором будет хранится что тема письма содержит данные.
+is_subject_empty = not email["subject"].strip()
+is_body_empty = not email["body"].strip()
